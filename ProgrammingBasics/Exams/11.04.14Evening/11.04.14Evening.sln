@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Cinema", "01.Cinema\01.Cinema.csproj", "{DB3987D8-4452-4AFF-ABD8-D5CDAFF6717B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Illuminati", "02.Illuminati\02.Illuminati.csproj", "{4E5A9EC5-1949-4875-B6E2-17163E11952F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.NewHouse", "03.NewHouse\03.NewHouse.csproj", "{2A88C2A9-C49B-4A04-9C53-C10A0A675468}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.CrossingSequences", "04.CrossingSequences\04.CrossingSequences.csproj", "{4ECCFE90-A215-45BD-A47E-5CCD09963015}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB3987D8-4452-4AFF-ABD8-D5CDAFF6717B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB3987D8-4452-4AFF-ABD8-D5CDAFF6717B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB3987D8-4452-4AFF-ABD8-D5CDAFF6717B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB3987D8-4452-4AFF-ABD8-D5CDAFF6717B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E5A9EC5-1949-4875-B6E2-17163E11952F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E5A9EC5-1949-4875-B6E2-17163E11952F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E5A9EC5-1949-4875-B6E2-17163E11952F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E5A9EC5-1949-4875-B6E2-17163E11952F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A88C2A9-C49B-4A04-9C53-C10A0A675468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A88C2A9-C49B-4A04-9C53-C10A0A675468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A88C2A9-C49B-4A04-9C53-C10A0A675468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A88C2A9-C49B-4A04-9C53-C10A0A675468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ECCFE90-A215-45BD-A47E-5CCD09963015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ECCFE90-A215-45BD-A47E-5CCD09963015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ECCFE90-A215-45BD-A47E-5CCD09963015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ECCFE90-A215-45BD-A47E-5CCD09963015}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
