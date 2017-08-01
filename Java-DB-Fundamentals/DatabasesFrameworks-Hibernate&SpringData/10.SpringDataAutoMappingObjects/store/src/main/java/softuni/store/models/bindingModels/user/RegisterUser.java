@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 @PasswordMatching
 public class RegisterUser implements Serializable {
-    @Pattern(regexp = ".+[@.]+.+", message = "Invalid email")
+    @Pattern(regexp = ".+@+.+\\.+.+", message = "Invalid email")
     private String email;
     @Password
     private String password;

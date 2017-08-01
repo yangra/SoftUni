@@ -16,7 +16,7 @@ public class LoginCommand extends Command {
         String email = params[0];
         String password = params[1];
         if (Session.getLoggedInUser() != null) {
-            return "User already logged in";
+            return "There is another user logged in.";
         }
 
         LoggedInUser loggedInUser = super.getUserService().login(email, password);

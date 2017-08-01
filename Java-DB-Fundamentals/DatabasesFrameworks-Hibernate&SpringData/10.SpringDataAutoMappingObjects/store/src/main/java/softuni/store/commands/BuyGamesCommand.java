@@ -3,6 +3,7 @@ package softuni.store.commands;
 
 import softuni.store.Utils.Session;
 import softuni.store.models.bindingModels.game.ShoppingCartGame;
+import softuni.store.models.bindingModels.user.ShoppingUser;
 import softuni.store.services.api.GameService;
 import softuni.store.services.api.UserService;
 
@@ -18,19 +19,22 @@ public class BuyGamesCommand extends Command{
         if(Session.getLoggedInUser() == null){
             return "No user logged in.";
         }
+
         Long userId = Session.getLoggedInUser().getId();
-        List<ShoppingCartGame> shoppingCartGames = super.getGameService().getShoppingCartById(userId);
-        if(shoppingCartGames.isEmpty()){
+        ShoppingUser shoppingUser = super.getUserService().getShoppingUserById(userId);
+        if(shoppingUser.getShoppingCartGames().isEmpty()){
             return "There's nothing to buy. Shopping cart is empty.";
         }
-        for (ShoppingCartGame shoppingCartGame : shoppingCartGames) {
-            Long gameId = shoppingCartGame.getId();
-            super.getGameService().buyGame(gameId,userId);
-        }
+
         StringBuilder sb = new StringBuilder();
-        for (ShoppingCartGame shoppingCartGame : shoppingCartGames) {
+        for (ShoppingCartGame shoppingCartGame : shoppingUser.getShoppingCartGames()) {
+            shoppingUser.getBoughtGames().add(shoppingCartGame);
             sb.append(shoppingCartGame.toString());
         }
+
+        shoppingUser.getShoppingCartGames().clear();
+        super.getUserService().save(shoppingUser);
+
         return String.format("Successfully bought games:\n%s",sb.toString());
     }
 }

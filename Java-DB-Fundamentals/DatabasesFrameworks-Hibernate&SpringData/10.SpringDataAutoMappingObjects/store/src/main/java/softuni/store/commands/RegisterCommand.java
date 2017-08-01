@@ -19,6 +19,9 @@ public class RegisterCommand extends Command {
 
     @Override
     public String execute(String... params) {
+        if(this.getUserService().getByEmail(params[0])!= null){
+            return "Cannot register new user. User with that email was already registered.";
+        }
         RegisterUser registerUser = new RegisterUser();
         registerUser.setEmail(params[0]);
         registerUser.setPassword(params[1]);

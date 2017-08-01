@@ -17,6 +17,7 @@ public class GameDetailsCommand extends Command{
         if(gameDetailsView == null){
             return "There is no game with that name in the database.";
         }
+
         return gameDetailsView.toString();
     }
 }

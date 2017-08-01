@@ -18,8 +18,6 @@ public class Game {
     private String description;
     private Date releaseDate;
 
-    private Set<User> gameOwners;
-    private Set<User> gameBuyers;
 
     public Game() {
     }
@@ -97,20 +95,4 @@ public class Game {
         this.releaseDate = releaseDate;
     }
 
-    @ManyToMany(mappedBy = "boughtGames")
-    public Set<User> getGameOwners() {
-        return gameOwners;
-    }
-
-    public void setGameOwners(Set<User> gameOwners) {
-        this.gameOwners = gameOwners;
-    }
-    @ManyToMany(mappedBy = "shoppingCartGames")
-    public Set<User> getGameBuyers() {
-        return gameBuyers;
-    }
-
-    public void setGameBuyers(Set<User> gameBuyers) {
-        this.gameBuyers = gameBuyers;
-    }
 }

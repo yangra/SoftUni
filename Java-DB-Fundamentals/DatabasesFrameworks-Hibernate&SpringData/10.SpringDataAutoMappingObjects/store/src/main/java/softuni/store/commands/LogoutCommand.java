@@ -14,8 +14,9 @@ public class LogoutCommand extends Command {
     @Override
     public String execute(String... params) {
         if(Session.getLoggedInUser()==null){
-            return "Cannot log out. no user was logged in.";
+            return "Cannot log out. No user was logged in.";
         }
+
         LoggedInUser loggedInUser = Session.getLoggedInUser();
         Session.setLoggedInUser(null);
         return String.format("User %s successfully logged out", loggedInUser.getFullName());

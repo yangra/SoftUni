@@ -39,18 +39,4 @@ public interface GameService {
     GameDetailsView getGameDetailsByName(String title);
 
     ShoppingCartGame getShoppingCartGameByName(String title);
-
-    BoughtGame getBoughtGameById(Long id, Long userId);
-
-    void addToShoppingCart(Long gameId, Long userId);
-
-    ShoppingCartGame getGameInCartById(Long gameId, Long userId);
-
-    void removeFromShoppingCart(Long gameId, Long userId);
-
-    List<ShoppingCartGame> getShoppingCartById(Long userId);
-
-    void buyGame(Long gameId, Long userId);
-
-    List<OwnedGameView> getOwnedGames(Long userId);
 }

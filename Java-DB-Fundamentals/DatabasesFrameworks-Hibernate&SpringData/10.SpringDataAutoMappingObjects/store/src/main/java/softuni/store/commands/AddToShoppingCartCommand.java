@@ -3,6 +3,7 @@ package softuni.store.commands;
 
 import softuni.store.Utils.Session;
 import softuni.store.models.bindingModels.game.ShoppingCartGame;
+import softuni.store.models.bindingModels.user.ShoppingUser;
 import softuni.store.services.api.GameService;
 import softuni.store.services.api.UserService;
 
@@ -21,15 +22,19 @@ public class AddToShoppingCartCommand extends Command {
         if(shoppingCartGame==null){
             return "Cannot add to shopping cart. There is no such game in the database";
         }
+
         Long userId = Session.getLoggedInUser().getId();
-        Long gameId = shoppingCartGame.getId();
-        if(super.getGameService().getBoughtGameById(gameId,userId)!= null){
-            return "You cannot add this game to your shopping cart, because you already bought it.";
+        ShoppingUser shoppingUser = super.getUserService().getShoppingUserById(userId);
+        if(shoppingUser.getBoughtGames().contains(shoppingCartGame)){
+            return "Cannot add this game to your shopping cart. It's already bought once.";
         }
-        if(super.getGameService().getGameInCartById(gameId,userId)!=null){
+
+        if(shoppingUser.getShoppingCartGames().contains(shoppingCartGame)){
             return "Cannot add to shopping cart.The game is already in the cart.";
         }
-        super.getGameService().addToShoppingCart(gameId,userId);
+
+        shoppingUser.getShoppingCartGames().add(shoppingCartGame);
+        super.getUserService().save(shoppingUser);
         return String.format("%s added to cart",shoppingCartGame.getTitle());
     }
 }

@@ -1,5 +1,6 @@
 package softuni.store.services.impl;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,6 +12,8 @@ import softuni.store.models.bindingModels.game.BoughtGame;
 import softuni.store.models.bindingModels.game.ShoppingCartGame;
 import softuni.store.models.bindingModels.user.LoggedInUser;
 import softuni.store.models.bindingModels.user.RegisterUser;
+import softuni.store.models.bindingModels.user.ShoppingUser;
+import softuni.store.models.viewModels.user.UserOwner;
 import softuni.store.repositories.UserRepository;
 import softuni.store.services.api.UserService;
 
@@ -43,6 +46,34 @@ public class UserServiceImpl implements UserService {
             loggedInUser = ModelParser.getInstance().map(user, LoggedInUser.class);
         }
         return loggedInUser;
+    }
+
+    @Override
+    public RegisterUser getByEmail(String email) {
+        User user = this.userRepository.findByEmail(email);
+        if(user == null){
+            return null;
+        }
+        return ModelParser.getInstance().map(user,RegisterUser.class);
+    }
+
+    @Override
+    public ShoppingUser getShoppingUserById(Long userId) {
+        User user = this.userRepository.findOne(userId);
+        return ModelParser.getInstance().map(user,ShoppingUser.class);
+    }
+
+    @Override
+    public void save(ShoppingUser shoppingUser) {
+        User user = this.userRepository.findOne(shoppingUser.getId());
+        ModelParser.getInstance().map(shoppingUser,user);
+        this.userRepository.saveAndFlush(user);
+    }
+
+    @Override
+    public UserOwner getUserOwnerById(Long userId) {
+        User user = this.userRepository.findOne(userId);
+        return ModelParser.getInstance().map(user,UserOwner.class);
     }
 
 }

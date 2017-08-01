@@ -25,12 +25,10 @@ import java.util.List;
 @Transactional
 public class GameServiceImpl implements GameService {
     private final GameRepository gameRepository;
-    private final UserRepository userRepository;
 
     @Autowired
-    public GameServiceImpl(GameRepository gameRepository, UserRepository userRepository) {
+    public GameServiceImpl(GameRepository gameRepository) {
         this.gameRepository = gameRepository;
-        this.userRepository = userRepository;
     }
 
     @Override
@@ -133,75 +131,4 @@ public class GameServiceImpl implements GameService {
         return ModelParser.getInstance().map(game,ShoppingCartGame.class);
     }
 
-    @Override
-    public BoughtGame getBoughtGameById(Long id, Long userId) {
-        Game game = this.gameRepository.findByGameOwnerAndId(id, userId);
-        if(game== null){
-            return null;
-        }
-        return ModelParser.getInstance().map(game,BoughtGame.class);
-
-    }
-
-    @Override
-    public void addToShoppingCart(Long gameId, Long userId) {
-        Game game = this.gameRepository.findOne(gameId);
-        User user = this.userRepository.findOne(userId);
-        game.getGameBuyers().add(user);
-        user.getShoppingCartGames().add(game);
-        this.gameRepository.saveAndFlush(game);
-        this.userRepository.saveAndFlush(user);
-    }
-
-    @Override
-    public ShoppingCartGame getGameInCartById(Long gameId, Long userId) {
-       Game game = this.gameRepository.findCartGameByIdAndBuyer(gameId,userId);
-       if(game == null){
-           return null;
-       }
-       return ModelParser.getInstance().map(game,ShoppingCartGame.class);
-    }
-
-    @Override
-    public void removeFromShoppingCart(Long gameId, Long userId) {
-        Game game = this.gameRepository.findOne(gameId);
-        User user = this.userRepository.findOne(userId);
-        game.getGameBuyers().remove(user);
-        user.getShoppingCartGames().remove(game);
-        this.gameRepository.saveAndFlush(game);
-        this.userRepository.saveAndFlush(user);
-    }
-
-    @Override
-    public List<ShoppingCartGame> getShoppingCartById(Long userId) {
-        List<Game> games = this.gameRepository.findCartGamesByUserId(userId);
-        List<ShoppingCartGame> shoppingCartGames = new ArrayList<>();
-        for (Game game : games) {
-            ShoppingCartGame shoppingCartGame = ModelParser.getInstance().map(game,ShoppingCartGame.class);
-            shoppingCartGames.add(shoppingCartGame);
-        }
-        return shoppingCartGames;
-    }
-
-    @Override
-    public void buyGame(Long gameId, Long userId) {
-        Game game = this.gameRepository.findOne(gameId);
-        User user = this.userRepository.findOne(userId);
-        game.getGameOwners().add(user);
-        user.getBoughtGames().add(game);
-        this.gameRepository.saveAndFlush(game);
-        this.userRepository.saveAndFlush(user);
-        removeFromShoppingCart(gameId,userId);
-    }
-
-    @Override
-    public List<OwnedGameView> getOwnedGames(Long userId) {
-        List<Game> games = this.gameRepository.findOwnedGamesByUserId(userId);
-        List<OwnedGameView> ownedGameViews = new ArrayList<>();
-        for (Game game : games) {
-           OwnedGameView ownedGameView = ModelParser.getInstance().map(game,OwnedGameView.class);
-           ownedGameViews.add(ownedGameView);
-        }
-        return ownedGameViews;
-    }
 }

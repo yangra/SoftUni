@@ -77,6 +77,7 @@ public class User {
     public void setShoppingCartGames(Set<Game> shoppingCartGames) {
         this.shoppingCartGames = shoppingCartGames;
     }
+
     @ManyToMany
     @JoinTable(name = "users_bought_games",
             joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
