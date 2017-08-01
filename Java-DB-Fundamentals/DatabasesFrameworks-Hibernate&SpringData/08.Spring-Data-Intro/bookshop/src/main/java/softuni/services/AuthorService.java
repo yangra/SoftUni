@@ -1,0 +1,11 @@
+package softuni.services;
+
+
+import java.util.List;
+
+public interface AuthorService<Author, Long> extends ServiceInterface<Author, Long> {
+
+    List<Author> getAuthorsWithBookReleaseDateBefore(Integer year);
+
+    List<Object[]> getAllAuthorsByTheNumberOfTheirBooks();
+}
