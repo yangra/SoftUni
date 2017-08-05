@@ -1,0 +1,437 @@
+[
+  {
+    "Id": 29,
+    "Name": "Louann Holzworth",
+    "BirthDate": "1960-10-01T00:00:00",
+    "IsYoungDriver": false,
+    "Sales": []
+  },
+  {
+    "Id": 28,
+    "Name": "Donnetta Soliz",
+    "BirthDate": "1963-10-01T00:00:00",
+    "IsYoungDriver": true,
+    "Sales": [
+      {
+        "make": "Renault",
+        "model": "Clio IV"
+      }
+    ]
+  },
+  {
+    "Id": 17,
+    "Name": "Rema Revelle",
+    "BirthDate": "1970-05-01T00:00:00",
+    "IsYoungDriver": true,
+    "Sales": [
+      {
+        "make": "Rolls-Royce",
+        "model": "Wraith"
+      },
+      {
+        "make": "Peugeot",
+        "model": "308"
+      }
+    ]
+  },
+  {
+    "Id": 16,
+    "Name": "Carri Knapik",
+    "BirthDate": "1972-02-02T00:00:00",
+    "IsYoungDriver": true,
+    "Sales": [
+      {
+        "make": "Nissan",
+        "model": "GT-R"
+      },
+      {
+        "make": "Ford",
+        "model": "Taurus"
+      }
+    ]
+  },
+  {
+    "Id": 27,
+    "Name": "Garret Capron",
+    "BirthDate": "1975-07-01T00:00:00",
+    "IsYoungDriver": false,
+    "Sales": [
+      {
+        "make": "Seat",
+        "model": "Toledo"
+      },
+      {
+        "make": "Seat",
+        "model": "Toledo"
+      },
+      {
+        "make": "Ford",
+        "model": "Fiesta"
+      },
+      {
+        "make": "Lamborghini",
+        "model": "Murciélago"
+      },
+      {
+        "make": "Citroen",
+        "model": "C5"
+      }
+    ]
+  },
+  {
+    "Id": 8,
+    "Name": "Teddy Hobby",
+    "BirthDate": "1975-10-01T00:00:00",
+    "IsYoungDriver": true,
+    "Sales": [
+      {
+        "make": "Seat",
+        "model": "Toledo"
+      },
+      {
+        "make": "Ferrari",
+        "model": "250 GTO"
+      }
+    ]
+  },
+  {
+    "Id": 10,
+    "Name": "Audrea Cardinal",
+    "BirthDate": "1976-10-01T00:00:00",
+    "IsYoungDriver": false,
+    "Sales": []
+  },
+  {
+    "Id": 11,
+    "Name": "Francis Mckim",
+    "BirthDate": "1977-10-01T00:00:00",
+    "IsYoungDriver": true,
+    "Sales": [
+      {
+        "make": "BMW",
+        "model": "M5 F10"
+      }
+    ]
+  },
+  {
+    "Id": 14,
+    "Name": "Brett Brickley",
+    "BirthDate": "1980-10-01T00:00:00",
+    "IsYoungDriver": true,
+    "Sales": [
+      {
+        "make": "Alfa Romeo",
+        "model": "164"
+      },
+      {
+        "make": "Mercedes",
+        "model": "W204"
+      }
+    ]
+  },
+  {
+    "Id": 15,
+    "Name": "Kristian Engberg",
+    "BirthDate": "1981-10-03T00:00:00",
+    "IsYoungDriver": false,
+    "Sales": [
+      {
+        "make": "Toyota",
+        "model": "Corolla"
+      },
+      {
+        "make": "BMW",
+        "model": "E88"
+      }
+    ]
+  },
+  {
+    "Id": 26,
+    "Name": "Hipolito Lamoreaux",
+    "BirthDate": "1982-08-01T00:00:00",
+    "IsYoungDriver": true,
+    "Sales": [
+      {
+        "make": "Citroen",
+        "model": "C5"
+      }
+    ]
+  },
+  {
+    "Id": 4,
+    "Name": "Zada Attwood",
+    "BirthDate": "1982-10-01T00:00:00",
+    "IsYoungDriver": true,
+    "Sales": []
+  },
+  {
+    "Id": 25,
+    "Name": "Sylvie Mcelravy",
+    "BirthDate": "1983-10-01T00:00:00",
+    "IsYoungDriver": false,
+    "Sales": [
+      {
+        "make": "Opel",
+        "model": "Insignia"
+      }
+    ]
+  },
+  {
+    "Id": 7,
+    "Name": "Rico Peer",
+    "BirthDate": "1984-10-01T00:00:00",
+    "IsYoungDriver": true,
+    "Sales": [
+      {
+        "make": "Rolls-Royce",
+        "model": "Phantom Drophead Coupé"
+      },
+      {
+        "make": "Renault",
+        "model": "Espace"
+      }
+    ]
+  },
+  {
+    "Id": 5,
+    "Name": "Hai Everton",
+    "BirthDate": "1985-10-01T00:00:00",
+    "IsYoungDriver": true,
+    "Sales": [
+      {
+        "make": "Fiat",
+        "model": "Freemont"
+      }
+    ]
+  },
+  {
+    "Id": 6,
+    "Name": "Lino Subia",
+    "BirthDate": "1985-12-21T00:00:00",
+    "IsYoungDriver": false,
+    "Sales": [
+      {
+        "make": "Nissan",
+        "model": "GT-R"
+      },
+      {
+        "make": "Toyota",
+        "model": "Prius"
+      },
+      {
+        "make": "Rolls-Royce",
+        "model": "Phantom Drophead Coupé"
+      }
+    ]
+  },
+  {
+    "Id": 24,
+    "Name": "Jimmy Grossi",
+    "BirthDate": "1986-07-01T00:00:00",
+    "IsYoungDriver": true,
+    "Sales": [
+      {
+        "make": "Dacia",
+        "model": "Logan"
+      },
+      {
+        "make": "Ferrari",
+        "model": "F40"
+      }
+    ]
+  },
+  {
+    "Id": 12,
+    "Name": "Carole Witman",
+    "BirthDate": "1987-10-01T00:00:00",
+    "IsYoungDriver": false,
+    "Sales": []
+  },
+  {
+    "Id": 13,
+    "Name": "Oren Perlman",
+    "BirthDate": "1988-10-01T00:00:00",
+    "IsYoungDriver": true,
+    "Sales": [
+      {
+        "make": "Chevy",
+        "model": "Camaro"
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "Name": "Natalie Poli",
+    "BirthDate": "1990-10-04T00:00:00",
+    "IsYoungDriver": false,
+    "Sales": [
+      {
+        "make": "BMW",
+        "model": "F04"
+      }
+    ]
+  },
+  {
+    "Id": 3,
+    "Name": "Marcelle Griego",
+    "BirthDate": "1990-10-04T00:00:00",
+    "IsYoungDriver": true,
+    "Sales": [
+      {
+        "make": "Citroen",
+        "model": "Elysée"
+      },
+      {
+        "make": "Toyota",
+        "model": "Tacoma"
+      },
+      {
+        "make": "Toyota",
+        "model": "Camry Hybrid"
+      }
+    ]
+  },
+  {
+    "Id": 19,
+    "Name": "Yvonne Mccalla",
+    "BirthDate": "1992-03-02T00:00:00",
+    "IsYoungDriver": true,
+    "Sales": [
+      {
+        "make": "Skoda",
+        "model": "Rapid Spaceback"
+      },
+      {
+        "make": "Fiat",
+        "model": "Panda"
+      }
+    ]
+  },
+  {
+    "Id": 30,
+    "Name": "Ann Mcenaney",
+    "BirthDate": "1992-03-02T00:00:00",
+    "IsYoungDriver": true,
+    "Sales": [
+      {
+        "make": "Toyota",
+        "model": "Prius"
+      },
+      {
+        "make": "Skoda",
+        "model": "Fabia"
+      },
+      {
+        "make": "Dacia",
+        "model": "Logan"
+      }
+    ]
+  },
+  {
+    "Id": 21,
+    "Name": "Cinthia Lasala",
+    "BirthDate": "1992-11-01T00:00:00",
+    "IsYoungDriver": true,
+    "Sales": [
+      {
+        "make": "BMW",
+        "model": "X6 M"
+      }
+    ]
+  },
+  {
+    "Id": 1,
+    "Name": "Emmitt Benally",
+    "BirthDate": "1993-11-20T00:00:00",
+    "IsYoungDriver": true,
+    "Sales": [
+      {
+        "make": "Chevy",
+        "model": "Impala"
+      },
+      {
+        "make": "Mercedes",
+        "model": "W211"
+      },
+      {
+        "make": "Ford",
+        "model": "Torino"
+      }
+    ]
+  },
+  {
+    "Id": 20,
+    "Name": "Nisha Markwell",
+    "BirthDate": "1994-04-04T00:00:00",
+    "IsYoungDriver": false,
+    "Sales": [
+      {
+        "make": "Alfa Romeo",
+        "model": "Giulietta"
+      },
+      {
+        "make": "Renault",
+        "model": "Duster"
+      },
+      {
+        "make": "Mercedes",
+        "model": "W124"
+      }
+    ]
+  },
+  {
+    "Id": 23,
+    "Name": "Faustina Burgher",
+    "BirthDate": "1994-06-01T00:00:00",
+    "IsYoungDriver": false,
+    "Sales": [
+      {
+        "make": "Citroen",
+        "model": "C4"
+      }
+    ]
+  },
+  {
+    "Id": 18,
+    "Name": "Taina Achenbach",
+    "BirthDate": "1994-10-01T00:00:00",
+    "IsYoungDriver": false,
+    "Sales": [
+      {
+        "make": "Mercedes",
+        "model": "W212"
+      },
+      {
+        "make": "Chevy",
+        "model": "Caprice"
+      },
+      {
+        "make": "Dacia",
+        "model": "Logan"
+      },
+      {
+        "make": "Fiat",
+        "model": "Freemont"
+      }
+    ]
+  },
+  {
+    "Id": 9,
+    "Name": "Johnette Derryberry",
+    "BirthDate": "1995-10-01T00:00:00",
+    "IsYoungDriver": true,
+    "Sales": []
+  },
+  {
+    "Id": 22,
+    "Name": "Daniele Zarate",
+    "BirthDate": "1995-10-05T00:00:00",
+    "IsYoungDriver": false,
+    "Sales": [
+      {
+        "make": "Dacia",
+        "model": "Sandero Stepway"
+      }
+    ]
+  }
+]
