@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<photographers>
+    <photographer name="Samuel Fosso" primary-camera="Pentax K200D"/>
+    <photographer name="Julie Moss" primary-camera="Nikon D600">
+        <lenses>
+            <lens>Tokina 85 1.4</lens>
+        </lenses>
+    </photographer>
+    <photographer name="Zhang Xiao" primary-camera="Sony A290"/>
+    <photographer name="Camaru Kolya" primary-camera="Pentax K200D"/>
+    <photographer name="Stephnie Arciniega" primary-camera="Pentax K-5"/>
+    <photographer name="Rosalba Hane" primary-camera="Canon 80D">
+        <lenses>
+            <lens>Tokina 14 2.0</lens>
+        </lenses>
+    </photographer>
+    <photographer name="Dante Ketter" primary-camera="Fuji XM1">
+        <lenses>
+            <lens>Tamron 24 1.8</lens>
+        </lenses>
+    </photographer>
+    <photographer name="Lajuana Mcclean" primary-camera="Fuji X10"/>
+    <photographer name="Carolee Kuder" primary-camera="Canon 80D">
+        <lenses>
+            <lens>Canon 24 3.5</lens>
+            <lens>Canon 8 2.8</lens>
+        </lenses>
+    </photographer>
+    <photographer name="Tifany Stpeter" primary-camera="Nikon D2X">
+        <lenses>
+            <lens>Nikon 40 4.0</lens>
+        </lenses>
+    </photographer>
+    <photographer name="Annabelle Nimmo" primary-camera="Nikon D7000">
+        <lenses>
+            <lens>Nikon 24 4.0</lens>
+            <lens>Sigma 30 2.4</lens>
+        </lenses>
+    </photographer>
+    <photographer name="Betsey Oconner" primary-camera="Nikon D3X">
+        <lenses>
+            <lens>Tokina 135 2.8</lens>
+            <lens>Nikon 28 4.0</lens>
+        </lenses>
+    </photographer>
+    <photographer name="Tashia Lunsford" primary-camera="Pentax K-500">
+        <lenses>
+            <lens>Pentax 18 2.8</lens>
+        </lenses>
+    </photographer>
+    <photographer name="Rita Bucklew" primary-camera="Nikon D5">
+        <lenses>
+            <lens>Nikon 24 4.0</lens>
+        </lenses>
+    </photographer>
+    <photographer name="Wendy Ellwood" primary-camera="Pentax K-01">
+        <lenses>
+            <lens>Pentax 25 2.8</lens>
+        </lenses>
+    </photographer>
+    <photographer name="Sharee Rothchild" primary-camera="Nikon D2H">
+        <lenses>
+            <lens>Nikon 12 4.0</lens>
+            <lens>Tokina 135 2.8</lens>
+            <lens>Tokina 135 2.8</lens>
+            <lens>Nikon 14 2.0</lens>
+            <lens>Nikon 1200 8.0</lens>
+        </lenses>
+    </photographer>
+    <photographer name="Aimee Ochoa" primary-camera="Canon 760D">
+        <lenses>
+            <lens>Sigma 55 4.0</lens>
+            <lens>Canon 77 4.0</lens>
+            <lens>Canon 500 1.4</lens>
+        </lenses>
+    </photographer>
+    <photographer name="Lucina Jesse" primary-camera="Nikon D5500">
+        <lenses>
+            <lens>Nikon 100 1.8</lens>
+        </lenses>
+    </photographer>
+    <photographer name="Leota Eastep" primary-camera="Pentax K110D">
+        <lenses>
+            <lens>Sigma 28 2.4</lens>
+            <lens>Sigma 70 1.4</lens>
+            <lens>Pentax 10 1.2</lens>
+            <lens>Sigma 15 2.0</lens>
+            <lens>Tokina 20 2.8</lens>
+        </lenses>
+    </photographer>
+    <photographer name="Benjamin Lindblad" primary-camera="Canon 5D Mk III">
+        <lenses>
+            <lens>Tokina 200 2.8</lens>
+        </lenses>
+    </photographer>
+</photographers>
