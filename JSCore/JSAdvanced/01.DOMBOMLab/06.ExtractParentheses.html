@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+<p id="content"  onload="solution()" >
+    This is a text.(This text) ABC (abs)
+</p>
+
+<script>
+
+    window.onload = function () {
+        solution();
+    };
+
+    function solution() {
+        let arr = [];
+        let text = document.getElementById('content').textContent;
+        console.log(text);
+        let regex = /\((.+?)\)/g;
+        let match = regex.exec(text);
+        while(match){
+            arr.push(match[1]);
+            match = regex.exec(text);
+        }
+        return arr.join('; ');
+    }
+
+</script>
+</body>
+</html>
