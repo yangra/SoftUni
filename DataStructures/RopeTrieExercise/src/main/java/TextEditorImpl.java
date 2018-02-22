@@ -17,38 +17,53 @@ public class TextEditorImpl implements TextEditor {
     }
 
     @Override
-    public void logout(String username) { }
+    public void logout(String username) {
+        this.users.delete(username);
+        this.cache.remove(username);
+    }
 
     @Override
     public void prepend(String username, String string) {
-        this.cacheString(username);
-        this.users.getValue(username).insert(0, string);
-    }
+        if (!string.isEmpty()) {
+            this.cacheString(username);
+            this.users.getValue(username).insert(0, string);
+        }
 
+    }
 
     @Override
     public void insert(String username, int index, String string) {
-        this.cacheString(username);
-        this.users.getValue(username).insert(index, string);
+        if (!string.isEmpty()&&index >= 0 && index <= users.getValue(username).length()) {
+            this.cacheString(username);
+            this.users.getValue(username).insert(index, string);
+        }
     }
 
     @Override
     public void substring(String username, int startIndex, int length) {
-        this.cacheString(username);
-        String substring = this.users.getValue(username).toString().substring(startIndex, startIndex + length);
-        this.users.setValue(username, new StringBuilder(substring));
+        int stringLength = users.getValue(username).length();
+        if (startIndex >= 0 && length > 0 && startIndex < stringLength && startIndex + length <= stringLength) {
+            this.cacheString(username);
+            String substring = this.users.getValue(username).substring(startIndex, startIndex + length);
+            this.users.setValue(username, new StringBuilder(substring));
+        }
     }
 
     @Override
     public void delete(String username, int startIndex, int length) {
-        this.cacheString(username);
-        this.users.getValue(username).delete(startIndex, startIndex + length);
+        int stringLength = users.getValue(username).length();
+        if (startIndex >= 0 && length > 0 && startIndex < stringLength && startIndex + length <= stringLength) {
+            this.cacheString(username);
+            this.users.getValue(username).delete(startIndex, startIndex + length);
+        }
     }
 
     @Override
     public void clear(String username) {
-        this.cacheString(username);
-        this.users.setValue(username, new StringBuilder());
+        if (users.getValue(username).length() != 0) {
+            this.cacheString(username);
+            this.users.setValue(username, new StringBuilder());
+        }
     }
 
     @Override
@@ -63,7 +78,11 @@ public class TextEditorImpl implements TextEditor {
 
     @Override
     public void undo(String username) {
-        this.users.setValue(username,this.cache.get(username).pop());
+        if (this.cache.get(username).size() == 0) {
+            return;
+        }
+
+        this.users.setValue(username, this.cache.get(username).pop());
     }
 
     @Override

@@ -52,7 +52,7 @@ public class Main {
                 }
 
                 String username = commandArgs[0];
-                if (!(users.containsKey(username) && users.get(username))) {
+                if (!users.containsKey(username) || !users.get(username)) {
                     line = reader.readLine();
                     continue;
                 }
@@ -96,8 +96,7 @@ public class Main {
             }
             line = reader.readLine();
         }
-
-    }
+  }
 
 }
 

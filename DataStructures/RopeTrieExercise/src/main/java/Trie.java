@@ -40,6 +40,31 @@ public class Trie<Value> {
         return reverseCollection(result);
     }
 
+    public void delete(String key){
+        this.root = this.delete(this.root, key, 0);
+    }
+
+    private Node delete(Node x, String key, int d)
+    {
+        if (x == null) return null;
+
+        Node node = null;
+        if (d == key.length())
+        {
+            x.isTerminal = false;
+            return x;
+        }
+        char c = key.charAt(d);
+
+        if (x.next.containsKey(c))
+        {
+            node = x.next.get(c);
+        }
+
+        x.next.put(c,this.delete(node, key, d + 1));
+        return x;
+    }
+
     private void collect(Node node, String prefix, Deque<String> result) {
         if (node == null) {
             return;
