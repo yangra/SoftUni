@@ -1,5 +1,4 @@
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.*;
 
 public class HashTable<TKey, TValue> implements Iterable<KeyValue<TKey, TValue>> {
 
@@ -39,19 +38,6 @@ public class HashTable<TKey, TValue> implements Iterable<KeyValue<TKey, TValue>>
         KeyValue<TKey, TValue> kvp = new KeyValue<>(key, value);
         this.elements[index].addLast(kvp);
         this.size++;
-    }
-
-
-
-    private void grow() {
-        HashTable<TKey,TValue> newTable = new HashTable<>(this.capacity*2);
-
-        for (KeyValue<TKey, TValue> kvp : this) {
-            newTable.add(kvp.getKey(), kvp.getValue());
-        }
-
-        this.elements = newTable.elements;
-        this.capacity = newTable.capacity;
     }
 
     public int size() {
@@ -155,11 +141,25 @@ public class HashTable<TKey, TValue> implements Iterable<KeyValue<TKey, TValue>>
     }
 
     public Iterable<TKey> keys() {
-        throw new UnsupportedOperationException();
+        List<TKey> keys = new ArrayList<>();
+        for (LinkedList<KeyValue<TKey,TValue>> element : this.elements) {
+            for (KeyValue<TKey, TValue> keyValue : element) {
+                keys.add(keyValue.getKey());
+            }
+        }
+
+        return keys;
     }
 
     public Iterable<TValue> values() {
-        throw new UnsupportedOperationException();
+        List<TValue> values = new ArrayList<>();
+        for (LinkedList<KeyValue<TKey,TValue>> element : this.elements) {
+            for (KeyValue<TKey, TValue> keyValue : element) {
+                values.add(keyValue.getValue());
+            }
+        }
+
+        return values;
     }
 
     @Override
@@ -179,5 +179,16 @@ public class HashTable<TKey, TValue> implements Iterable<KeyValue<TKey, TValue>>
 
     private int getIndex(TKey key) {
         return Math.abs(key.hashCode()) % this.capacity;
+    }
+
+    private void grow() {
+        HashTable<TKey,TValue> newTable = new HashTable<>(this.capacity*2);
+
+        for (KeyValue<TKey, TValue> kvp : this) {
+            newTable.add(kvp.getKey(), kvp.getValue());
+        }
+
+        this.elements = newTable.elements;
+        this.capacity = newTable.capacity;
     }
 }
