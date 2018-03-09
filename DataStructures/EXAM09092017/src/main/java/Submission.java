@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Submission implements Comparable<Submission>
 {
     private int id;
@@ -56,5 +58,23 @@ public class Submission implements Comparable<Submission>
 
     public int compareTo(Submission other) {
         return Integer.compare(this.getId(), other.getId());
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) return true;
+        if (other == null || getClass() != other.getClass()) return false;
+        Submission that = (Submission) other;
+        return id == that.id &&
+                userId == that.userId &&
+                contestId == that.contestId &&
+                points == that.points &&
+                type == that.type;
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(id, type, userId, contestId, points);
     }
 }
