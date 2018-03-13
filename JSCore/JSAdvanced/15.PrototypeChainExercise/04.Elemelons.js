@@ -12,15 +12,15 @@ function solve() {
         toString() {
             return `Element: ${this.getType()}` + '\n' +
                 `Sort: ${this.melonSort}` + '\n' +
-                `Element Index: ${this.getElementIndex()}`
+                `Element Index: ${this.elementIndex}`
         }
 
         getType() {
             return this.constructor.name.slice(0,-5);
         }
 
-        getElementIndex() {
-            return this.elementIndex;
+        get elementIndex() {
+            return this.weight* this.melonSort.length;
         }
 
     }
@@ -28,28 +28,24 @@ function solve() {
     class Watermelon extends Melon {
         constructor(weight, melonSort) {
             super(weight, melonSort);
-            this.elementIndex = this.weight * this.melonSort.length;
         }
     }
 
     class Earthmelon extends Melon {
         constructor(weight, melonSort) {
             super(weight, melonSort);
-            this.elementIndex = this.weight * this.melonSort.length;
         }
     }
 
     class Firemelon extends Melon {
         constructor(weight, melonSort) {
             super(weight, melonSort);
-            this.elementIndex = this.weight * this.melonSort.length;
         }
     }
 
     class Airmelon extends Melon {
         constructor(weight, melonSort) {
             super(weight, melonSort);
-            this.elementIndex = this.weight * this.melonSort.length;
         }
     }
 
