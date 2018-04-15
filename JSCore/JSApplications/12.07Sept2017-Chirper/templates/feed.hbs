@@ -1,0 +1,27 @@
+{{>header}}
+{{>menu}}
+<section id="viewFeed">
+    <div class="content">
+        <div class="chirper">
+
+            <h2 class="titlebar">{{username}}</h2>
+
+            <form id="formSubmitChirp" class="chirp-form" method="post" action="#/create-chirp">
+                <textarea name="text" class="chirp-input"></textarea>
+                <input class="chirp-submit" id="btnSubmitChirp" value="Chirp" type="submit">
+            </form>
+
+            <div id="userStats" class="user-details">
+                <span>{{numberOfChirps}} chirps</span> | <span>{{following}} following</span> | <span>{{followers}} followers</span>
+            </div>
+        </div>
+        <div id="chirps" class="chirps"><h2 class="titlebar">Chirps</h2>
+            <!-- TODO Load more articles -->
+            {{#each chirps}}
+                {{>chirp}}
+            {{/each}}
+        </div>
+    </div>
+</section>
+
+{{>footer}}
